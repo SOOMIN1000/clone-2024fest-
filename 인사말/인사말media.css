@@ -1,0 +1,263 @@
+@media (max-width:1800px){
+
+}
+
+@media (max-width:1679.98px) {
+    
+}
+
+@media (max-width:1600px){
+}
+
+@media (max-width:1500px){
+  
+}
+
+
+@media (max-width:1199.98px) {
+    html {
+        font-size: 9.5px;
+    }
+    .subpage_title{
+        font-size: 6rem;
+    }
+
+    #sub_wrap{
+        padding: 18rem 0 8rem 0;
+    }
+
+    #footer .f_info{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #footer .f_info address{
+        width: 100%;
+        max-width: unset;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width:991.18px) {
+    html {
+        font-size: 9px;
+    }
+    #header>div .ham .ham_icon div {
+        width: 4px;
+        height: 4px;
+    }
+    #header>div .ham .ham_icon>div.x.coll{
+        width: 22px;
+        border-radius: 10px;
+    }
+    #header>div .ham .ham_icon>div.w.coll{
+        width: 22px;
+        border-radius: 10px;
+    }
+    #gnb nav{
+        padding-top: 10rem;
+    }
+
+    .intro_wrap .sec01{
+        gap: 2rem;
+        align-items: center;
+    }
+    .intro_wrap .sec01>img{
+        width: 30rem;
+    }
+    .intro_wrap .sec01>div{
+        padding: 4rem 3rem;
+        font-size: 1.8rem;
+    }
+    .intro_wrap .sec01>div img{
+        width: 25rem;
+    }
+    .intro_wrap .sec01>div>div{
+        margin-top: 3rem;
+        height: 27rem
+    }
+
+    .intro_wrap .sec02 th, .intro_wrap .sec02 td{
+        padding: 1.2rem 2rem;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width:767.98px) {
+    html {
+        font-size: 8.5px;
+    }
+    :root {
+        --head--height: 7rem;
+    }
+
+    #header>div {
+        padding: 0 2rem;
+    }
+    #header .lang {
+        margin-right: 2.5rem;
+    }
+    #header .lang button {
+        gap: 1rem;
+        padding: 0 1.5rem;
+        width: 8rem;
+        height: 3.5rem;
+        font-size: 1.4rem;
+        border: 1px solid #000;
+        transition: .3s;
+    }
+    #header .ham span {
+        font-size: 2rem !important;
+    }
+
+    #gnb nav ul li a{
+        font-size: 2.6rem;
+    }
+
+    #sub_wrap{
+        padding: 12rem 0 6rem 0;
+    }
+
+    .subpage_title{
+        font-size: 4rem;
+    }
+
+    .intro_wrap .sec01{
+        display: block;
+        text-align: center;
+    }
+    .intro_wrap .sec01>img{
+        max-width: 270px;
+        width: 100%;
+    }
+    .intro_wrap .sec01>img{
+        display: block;
+        margin: auto;
+    }
+    .intro_wrap .sec01>div{
+        margin-top: 3rem;
+        text-align: left;
+        padding: 3rem 2rem;
+        font-size: 1.6rem;
+    }
+    .intro_wrap .sec01>div img{
+        width: 22rem;
+    }
+    .intro_wrap .sec01>div>div{
+        margin-top: 2rem;
+        height: auto;
+        overflow-y: unset;
+    }
+    .intro_wrap .sec02 th, .intro_wrap .sec02 td{
+        padding: 1.2rem 1.5rem;
+        font-size: 1.6rem;
+    }
+
+    #footer{
+        text-align: center;
+    }
+    #footer .f_info>p{
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    #footer .f_info .sns{
+        order: -1;
+        transform: translateY(0);
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 0 1rem;
+        margin-bottom: 2rem;
+    }
+    #footer .f_info .sns a{
+        margin: 0 !important;
+    }
+    #footer .f_foot{
+        flex-direction: column;
+        text-align: center;
+    }
+    #footer .f_foot .go_top a{
+        justify-content: center;
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width:576.98px) {
+    html {
+        font-size: 8px;
+    }
+    #header .lang{
+        margin-right: 1.5rem;
+    }
+    #gnb nav ul li a{
+        font-size: 2.4rem;
+    }
+
+    .subpage_title{
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+}
+
+@media (max-width:380px){
+    #header>div{
+        padding: 0 1rem;
+    }
+    #header h1 > a img{
+        max-width: 18rem !important;
+    }
+    div.ham .ham_icon{
+        width: 3.5rem !important;
+        height: 3.5rem !important;
+    }
+    #gnb nav ul li a{
+        font-size: 2.2rem;
+    }
+    
+}
+
+
+
+
+
+
+
+/* min */
+@media(min-width:576px){
+    .container{
+        max-width: 540px;
+    }
+    #footer .container{
+        max-width: 540px;
+    }
+}
+
+
+
+@media(min-width:768px){
+    .container{
+        max-width: 720px;
+    }
+    #footer .container{
+        max-width: 720px;
+    }
+    
+}
+
+@media(min-width:992px){
+    .container{
+        max-width: 960px;
+    }
+    #footer .container{
+        max-width: 960px;
+    }
+}
+
+@media(min-width:1199.98px){
+    .container{
+        max-width: 1660px;
+    }
+
+    #footer .container{
+        max-width: 1630px;
+    }
+}
