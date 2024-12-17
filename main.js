@@ -1517,9 +1517,28 @@ function cursor() {
     });
 }
 
-cursor();
 
-// For mouseover and mouseleave events
+// 첫 로드시 화면 크기 확인
+if(window.innerWidth<767){
+    document.querySelector("#cursor_div").style.display="none";
+}
+else
+{
+    cursor();
+}
+
+// 화면크기 변동 시 
+window.addEventListener("resize",()=>{
+    if(window.innerWidth>767){
+        document.querySelector("#cursor_div").style.display="block";
+        cursor();
+    }else{
+        document.querySelector("#cursor_div").style.display="none";
+        document.body.style.cursor = 'default';
+    }
+})
+
+// mouseover and mouseleave events 발동 시
 document.querySelectorAll(".cursor_over").forEach(item => {
     item.addEventListener("mouseover", function() {
         document.querySelector('.inner_wrap').classList.add('on');
