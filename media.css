@@ -239,6 +239,10 @@
         width: 20rem;
     }
 
+    .sec_instagram .swiper .swiper-slide>a:hover{
+        border-color: #e62e8b;
+    }
+
     .sec_youtube .title h2{
         font-size: 4rem;
     }
@@ -386,6 +390,7 @@
     .sec_instagram .title .deco1 img{
         max-width: 8rem;
     }
+    
 
     .sec_instagram .title .deco2 img{
         max-width: 5rem;
