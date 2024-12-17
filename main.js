@@ -31,7 +31,7 @@ window.addEventListener('scroll', function (e) {
     let header = this.document.querySelector("#header");
     let header_lang = header.querySelector(".lang button");
     let header_lang_ul = header.querySelector(".lang ul");
-    console.log(this.document.querySelector("body").offsetWidth);
+    // console.log(this.document.querySelector("body").offsetWidth);
     if (this.scrollY > 0) {
         header.style.backgroundColor = "#fff";
         header_lang.style.borderColor = "#000";
@@ -1547,7 +1547,7 @@ document.querySelectorAll("#map").forEach(item => {
     });
 });
 
-document.querySelectorAll(".youtube-box").forEach(item => {
+document.querySelectorAll(".sec02 .container .v_box .inner").forEach(item => {
     item.addEventListener("mouseover", function() {
         document.querySelector('.inner_wrap').style.display = 'none';
     });
