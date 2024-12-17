@@ -1736,6 +1736,44 @@ ul.week li[data-day="토"]{
 }
 /* footer 끝 */
 
+/* cursor */
+#cursor_div{
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 9999999;
+    mix-blend-mode: normal;
+}
+
+#cursor_div .inner_wrap{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%,-50%);
+    transition: all 0.3s ease;
+    background-color: #e62e8b;
+}
+
+#cursor_div .inner_wrap.on{
+    width: 4rem;
+    height: 4rem;
+    cursor: none;
+    background-color: #e62e8b;
+    filter: contrast(200%);
+}
+
+#cursor_div .inner_wrap.blue{
+    background-color: #00c6ff;
+}
+
+#cursor_div .inner{
+    text-align: center;
+}
+
 
 /* move(go_top) */
 .dropdown {

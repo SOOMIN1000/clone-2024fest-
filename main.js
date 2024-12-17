@@ -844,7 +844,7 @@ function printbanner(object) {
     let banners = object.map((v) => {
         return `
         <div class="swiper-slide perform${v.id} banner" data-cate="${v.cate}"'>
-            <a>
+            <a class="cursor_over">
                 <img src="${v.img}" alt="img00${v.id}">
                     <div class="txt_box">
                         <p>
@@ -918,17 +918,19 @@ function changeslide_performance(category, object) {
     let slides = object.filter((v) => v.cate == category).map((v) => {
         return `
          <div class="swiper-slide K${v.id}">
-        <a><img src="${v.img}" alt="slide_img${v.id}"></a>
-        <div class="txt-box">
-            <span class="category">${v.genre}</span>
-            <div class="title">
-                <h3>${v.tit}</h3>
+            <a class="cursor_over">
+                <img src="${v.img}" alt="slide_img${v.id}">
+            </a>
+            <div class="txt-box">
+                <span class="category">${v.genre}</span>
+                <div class="title">
+                    <h3>${v.tit}</h3>
+                </div>
+                <p class="day">${v.day}</p>
+                <p class="local">${v.local}</p>
+                <a href="#" target="_blank">더보기</a>
             </div>
-            <p class="day">${v.day}</p>
-            <p class="local">${v.local}</p>
-            <a href="#" target="_blank">더보기</a>
         </div>
-    </div>
         `
     }).join("");
 
@@ -1147,7 +1149,7 @@ function changeslide_genre(category, object) {
         slides = object.map((v) => {
             return `
              <div class="swiper-slide slide${v.id} active">
-                <a href="#" target="_blank">
+                <a href="#" target="_blank" class="cursor_over">
                     <img src="${v.img}" alt="img${v.img}">
                 </a>
                 <div class="txt-box">
@@ -1167,7 +1169,7 @@ function changeslide_genre(category, object) {
         slides = object.filter((v) => v.genre == category).map((v) => {
             return `
              <div class="swiper-slide slide${v.id} active">
-                <a href="#" target="_blank">
+                <a href="#" target="_blank" class="cursor_over">
                     <img src="${v.img}" alt="">
                 </a>
                 <div class="txt-box">
@@ -1375,7 +1377,7 @@ function slideday(date, object) {
     }).map((v) => {
         return `
         <div class="swiper-slide day_id${v.id}">
-                <a href="#" target="_blank">
+                <a href="#" target="_blank" class="cursor_over">
                     <div class="img">
                         <img src="${v.img}" alt="img${v.id}">
                     </div>
@@ -1386,7 +1388,7 @@ function slideday(date, object) {
             </div>
                 <p class="day">${v.day}</p>
                 <p class="loca">${v.local}</p>
-                <a href="#" class="more" target="_blank">더보기</a>
+                <a href="#" class="more cursor_over" target="_blank">더보기</a>
             </div>
         </div>`
     }).join("");
@@ -1498,4 +1500,58 @@ const menu = dropdown.querySelector(".dropdown-menu");
 // 드롭다운 토글
 button.addEventListener("click", () => {
     dropdown.classList.toggle("showdrop"); // 클래스 추가/제거로 메뉴 보이기/숨기기
+});
+
+// 커서 스타일
+function cursor() {
+    document.body.style.cursor = 'none';
+    document.addEventListener("mousemove", (e) => {
+        // Get the mouse cursor coordinates
+        const x = e.clientX;
+        const y = e.clientY;
+        // Move the cursor_div to the cursor coordinates
+        const cursorDiv = document.getElementById("cursor_div");
+        if (cursorDiv) {
+            cursorDiv.style.transform = `translate(${x}px, ${y}px)`;
+        }
+    });
+}
+
+cursor();
+
+// For mouseover and mouseleave events
+document.querySelectorAll(".cursor_over").forEach(item => {
+    item.addEventListener("mouseover", function() {
+        document.querySelector('.inner_wrap').classList.add('on');
+    });
+    item.addEventListener("mouseleave", function() {
+        document.querySelector('.inner_wrap').classList.remove('on');
+    });
+});
+
+document.querySelectorAll(".cursor_blue").forEach(item => {
+    item.addEventListener("mouseover", function() {
+        document.querySelector('.inner_wrap').classList.add('blue');
+    });
+    item.addEventListener("mouseleave", function() {
+        document.querySelector('.inner_wrap').classList.remove('blue');
+    });
+});
+
+document.querySelectorAll("#map").forEach(item => {
+    item.addEventListener("mouseover", function() {
+        document.querySelector('.inner_wrap').style.display = 'none';
+    });
+    item.addEventListener("mouseleave", function() {
+        document.querySelector('.inner_wrap').style.display = 'block';
+    });
+});
+
+document.querySelectorAll(".youtube-box").forEach(item => {
+    item.addEventListener("mouseover", function() {
+        document.querySelector('.inner_wrap').style.display = 'none';
+    });
+    item.addEventListener("mouseleave", function() {
+        document.querySelector('.inner_wrap').style.display = 'block';
+    });
 });

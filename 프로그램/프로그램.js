@@ -1159,8 +1159,9 @@ function renderPagination(totalPages) {
     let selected= document.querySelector("#sub_wrap .genre .tabArea .tabArea_head .tab li.on")
     let selected_id=selected.dataset.id;
     const prevLi=document.createElement('li');
-    prevLi.textContent='<';
+    prevLi.textContent='';
     prevLi.className=currentPage==1 ? 'disabled' : '';
+    prevLi.classList.add("prev");
     prevLi.addEventListener('click',()=>{
         if(currentPage > 1){
             currentPage=1;
@@ -1182,8 +1183,9 @@ function renderPagination(totalPages) {
     }
 
     const nextLi = document.createElement('li');
-    nextLi.textContent = '>';
+    nextLi.textContent = '';
     nextLi.className = currentPage === totalPages ? 'disabled' : 'abled';
+    nextLi.classList.add("next");
     nextLi.addEventListener('click', () => {
         if (currentPage < totalPages) {
             currentPage=totalPages;
