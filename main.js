@@ -1,4 +1,5 @@
 // gnb 슬라이드
+
 let lang = document.querySelector("#header div .gnb_side .lang");
 lang.addEventListener("click", () => {
     let ul = lang.querySelector("ul");
@@ -45,6 +46,7 @@ window.addEventListener('scroll', function (e) {
         }
         header_lang_ul.style.borderColor = "transparent"
         this.document.querySelector(".dropdown").style.visibility = "hidden";
+        this.document.querySelector(".dropdown").classList.remove("showdrop");
         this.document.querySelector(".dropdown").style.opacity = "0"
     } else {
         header.style.backgroundColor = "transparent";
@@ -53,6 +55,7 @@ window.addEventListener('scroll', function (e) {
         }
         header_lang_ul.style.borderColor = "transparent"
         this.document.querySelector(".dropdown").style.visibility = "hidden";
+        this.document.querySelector(".dropdown").classList.remove("showdrop");
         this.document.querySelector(".dropdown").style.opacity = "0"
     }
 });
@@ -1501,6 +1504,9 @@ const menu = dropdown.querySelector(".dropdown-menu");
 button.addEventListener("click", () => {
     dropdown.classList.toggle("showdrop"); // 클래스 추가/제거로 메뉴 보이기/숨기기
 });
+
+
+
 
 // 커서 스타일
 function cursor() {

@@ -1840,7 +1840,7 @@ ul.week li[data-day="토"]{
 
 /* 드롭다운 활성화 상태 */
 .dropdown.showdrop .dropdown-menu {
-    height: auto; /* 높이를 자동으로 설정 */
+    height: 296px;/* 높이는 li들의 높이만큼 */
     opacity: 1; /* 보이게 설정 */
     visibility: visible; /* 가시성을 보이게 설정 */
 }

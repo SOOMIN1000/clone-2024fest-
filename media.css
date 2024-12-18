@@ -308,6 +308,10 @@
     .sec_partnership .flex>.in{
         width: 25%;
     }
+    .dropdown.showdrop .dropdown-menu {
+        height: 285px;/* 높이는 li들의 높이만큼 */
+    }
+    
 }
 
 @media (max-width:767.98px) {
@@ -431,6 +435,9 @@
     .dropdown{
         right: 50%;
         transform: translateX(50%);
+    }
+    .dropdown.showdrop .dropdown-menu {
+        height: 276px;/* 높이는 li들의 높이만큼 */
     }
 }
 
@@ -578,6 +585,10 @@
     .sec_partnership .flex>.in{
         padding: 0 2rem;
         margin-bottom: 3rem;
+    }
+
+    .dropdown.showdrop .dropdown-menu {
+        height: 268px;/* 높이는 li들의 높이만큼 */
     }
 }
 
